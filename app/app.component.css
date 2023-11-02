@@ -1,0 +1,16 @@
+* {
+  box-sizing: border-box;
+}
+/* fabric style */
+.toolbar button {
+  float: left;
+  width: auto;
+  height: auto;
+}
+canvas {
+  border: 3px solid green;
+  display: block;
+}
+artboard {
+  margin: 30px 5px;
+}

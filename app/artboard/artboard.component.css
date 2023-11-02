@@ -1,0 +1,31 @@
+* {
+  box-sizing: border-box;
+}
+/* fabric style */
+.toolbar button {
+  float: left;
+  width: auto;
+  height: auto;
+}
+canvas {
+  border: 3px solid green;
+  display: block;
+}
+.hidden {
+  visibility: hidden;
+  height:0px!important;
+}
+.hidden div {
+  height:0px!important;
+}
+.toolTip{
+  position: absolute;
+  z-index: 1;
+  background: rgb(119, 128, 0);
+  height: 30px;
+  width: 120px;
+  padding: 8px;
+  font-size: 13px;
+  color: #fff;
+  visibility: hidden;
+}

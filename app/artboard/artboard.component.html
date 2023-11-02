@@ -1,0 +1,49 @@
+<hr />
+<ckeditor
+  [editor]="editor"
+  [config]="config"
+  (ngModelChange)="this.editorDataUpdate.next($event)"
+  [(ngModel)]="editorData"
+  #myEditor
+></ckeditor>
+<!-- works with textarea also-->
+<!--
+  <textarea
+  
+  (ngModelChange)="this.editorDataUpdate.next($event)"
+  [(ngModel)]="editorData"
+  #myEditor
+></textarea>
+-->
+
+<button type="submit" (click)="editorSubmit()">Add ckedit Text</button>
+<button (click)="addText()">Add Fabric Text</button>
+<button (click)="addImage()">Add Image</button>
+<button (click)="jsonPreview()">Preview JSON</button>
+<button (click)="send2back()">Send to Back</button>
+<button (click)="bring2front()">Bring to Front</button>
+<button (click)="deleteObject()">delete</button>
+
+<canvas id="canvas{{ canvasId }}" width="500" height="300"></canvas>
+
+<div id="toolbar" *ngIf="showToolbar" style="margin-top:30px">
+  <label>Font toolbar</label><br />
+  <button (click)="fontFamily('Comic Sans')">Family</button>
+  <button (click)="bold()">Bold</button>
+  <button (click)="italic()">Italic</button>
+  <button (click)="underline()">Underline</button>
+  <button (click)="textAlign()">Align right</button>
+  <button (click)="fontSize36()">Size test with 36px</button>
+  <button (click)="superscript()">superscript</button>
+  <button (click)="subscript()">subscript</button>
+  <button (click)="strike()">strike</button>
+  <button (click)="fontColor()">font color</button>
+  <button (click)="fontBgColor()">font bg color</button>
+</div>
+<div id="hidden" #hidden></div>
+
+<hr />
+<h3>=== Fabric js Preview ===</h3>
+<div id="canvas_preview" style="">
+  <canvas id="canvasPreview" width="500" height="500"></canvas>
+</div>

@@ -1,0 +1,5 @@
+<h4>Fabric js canvas with Ckeditor realtime text edit. Click Add Artboard to create multiple artboards </h4>
+<button (click)="addArtboard()">Add Artboard</button>
+<p *ngFor="let art of artboard; let index = index"> 
+<artboard [canvasId]="index" id="artboard{{index}}"></artboard>
+</p>
